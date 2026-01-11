@@ -1,6 +1,6 @@
 # Create.md
 
-##  Python Command
+## Python Command
 ```python
 from bookshelf.models import Book
 
@@ -10,7 +10,7 @@ book = Book.objects.create(
     publication_year=1949
 )
 
-##Comment
+## Comment
 Expected Output:
 <Book: Book object (1)>
 
