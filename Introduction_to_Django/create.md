@@ -12,7 +12,7 @@ book = Book.objects.create(
 ```
 
 ##Comment
-###Expected Output:
+Expected Output:
 <Book: Book object (1)>
 
 The Book instance was successfully created and saved to the database.
