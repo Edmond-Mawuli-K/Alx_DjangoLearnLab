@@ -10,7 +10,7 @@ book.delete()
 
 Book.objects.all()
 ```
-##Comment
+## Comment
 Expected Output:
 <QuerySet []>
 
