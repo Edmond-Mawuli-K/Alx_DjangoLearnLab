@@ -9,7 +9,7 @@ book = Book.objects.create(
     author="George Orwell",
     publication_year=1949
 )
-
+```
 ## Comment
 Expected Output:
 <Book: Book object (1)>
