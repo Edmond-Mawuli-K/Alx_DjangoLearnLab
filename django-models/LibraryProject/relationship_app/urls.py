@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
+from .views import admin_view, librarian_view, member_view
 
 urlpatterns = [
     # Function-based & class-based views for books/libraries
@@ -21,4 +22,10 @@ urlpatterns = [
     path('book/add/', views.add_book, name='add_book'),
     path('book/edit/<int:book_id>/', views.edit_book, name='edit_book'),
     path('book/delete/<int:book_id>/', views.delete_book, name='delete_book'),
+   
+
+    path('admin-view/', admin_view, name='admin_view'),
+    path('librarian-view/', librarian_view, name='librarian_view'),
+    path('member-view/', member_view, name='member_view'),
+
 ]
