@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 from .views import admin_view, librarian_view, member_view
+from .views import list_books
 
 urlpatterns = [
     # Function-based & class-based views for books/libraries
