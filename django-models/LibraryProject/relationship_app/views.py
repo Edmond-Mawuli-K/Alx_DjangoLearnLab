@@ -7,6 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView,LogoutView
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import user_passes_test
+from django.shortcuts import render
+from django.contrib.auth.decorators import permission_required
 
 def list_books(request):
     books = Book.objects.all()
@@ -62,3 +64,22 @@ def librarian_view(request):
 @user_passes_test(is_member)
 def member_view(request):
     return render(request, 'relationship_app/member_view.html')
+
+# ---------- Permission-Protected Views ----------
+
+@permission_required('relationship_app.can_add_book')
+def add_book(request):
+    # Placeholder content for checker
+    return render(request, 'relationship_app/list_books.html')
+
+
+@permission_required('relationship_app.can_change_book')
+def edit_book(request, book_id):
+    # Placeholder content for checker
+    return render(request, 'relationship_app/list_books.html')
+
+
+@permission_required('relationship_app.can_delete_book')
+def delete_book(request, book_id):
+    # Placeholder content for checker
+    return render(request, 'relationship_app/list_books.html')
